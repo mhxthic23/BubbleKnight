@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://immpo8yo3s5y"]
+
+[ext_resource type="Script" uid="uid://dlxhyc5bhs5tr" path="res://scripts/enemies/hollow_crawler.gd" id="1_ms73b"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_htemk"]
+size = Vector2(44, 44)
+
+[node name="HollowCrawler" type="CharacterBody2D" unique_id=63596771]
+script = ExtResource("1_ms73b")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=928828498]
+shape = SubResource("RectangleShape2D_htemk")
+
+[node name="Visual" type="Polygon2D" parent="." unique_id=2128097684]
+
+[node name="Eyes" type="Polygon2D" parent="Visual" unique_id=335221026]

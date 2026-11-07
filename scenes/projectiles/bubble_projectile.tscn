@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://bw1q5avuu18f8"]
+
+[ext_resource type="SpriteFrames" uid="uid://c4u33fjlcg0oe" path="res://resources/characters/bubblebound_frames.tres" id="1_rcib2"]
+[ext_resource type="Script" uid="uid://btwclvwe6ebk1" path="res://scripts/projectiles/bubble_projectile.gd" id="1_x6g27"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_htemk"]
+radius = 12.0
+
+[node name="BubbleProjectile" type="Area2D" unique_id=1453307480]
+script = ExtResource("1_x6g27")
+
+[node name="Visual" type="AnimatedSprite2D" parent="." unique_id=1273009246]
+scale = Vector2(0.35, 0.35)
+sprite_frames = ExtResource("1_rcib2")
+animation = &"bubble_projectile"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1085256822]
+shape = SubResource("CircleShape2D_htemk")

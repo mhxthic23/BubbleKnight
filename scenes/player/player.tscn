@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://y7m7tfd6bek5"]
+
+[ext_resource type="Script" uid="uid://b1wlk6yvokqf" path="res://scripts/player/player.gd" id="1_dovo2"]
+[ext_resource type="SpriteFrames" uid="uid://c4u33fjlcg0oe" path="res://resources/characters/bubblebound_frames.tres" id="2_dovo2"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_htemk"]
+radius = 14.0
+height = 56.0
+
+[node name="Player" type="CharacterBody2D" unique_id=1547845108]
+script = ExtResource("1_dovo2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=786677193]
+shape = SubResource("CapsuleShape2D_htemk")
+
+[node name="Visual" type="Node2D" parent="." unique_id=1599251968]
+
+[node name="ShootPoint" type="Marker2D" parent="Visual" unique_id=1564696257]
+position = Vector2(20, -8)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Visual" unique_id=987394021]
+texture_filter = 1
+sprite_frames = ExtResource("2_dovo2")
+animation = &"walk"
+frame_progress = 0.52593666
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1760266057]
+zoom = Vector2(2, 2)
